@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.Button?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<?import javafx.scene.control.Button?>
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="916.0" prefWidth="1155.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controllers.MainHomeController">
+   <children>
+      <BorderPane fx:id="bp" prefHeight="200.0" prefWidth="200.0">
+         <right>
+            <VBox prefHeight="521.0" prefWidth="164.0" spacing="10.0" style="-fx-background-color: #eeeeee;" BorderPane.alignment="CENTER">
+               <BorderPane.margin>
+                  <Insets />
+               </BorderPane.margin>
+               <children>
+                  <Button fx:id="btnHome" alignment="BOTTOM_CENTER" contentDisplay="TOP" onAction="#showMainView" prefHeight="65.0" prefWidth="164.0" style="-fx-background-color: #e0e0e0; -fx-border-color: #607d8b; -fx-border-width: 0px 0px 3px 2px;" text="الرئيسيه">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnEmployee" alignment="BOTTOM_CENTER" contentDisplay="TOP" layoutX="10.0" layoutY="10.0" onAction="#showEmployeeView" prefHeight="65.0" prefWidth="164.0" style="-fx-background-color: #e0e0e0; -fx-border-color: #607d8b; -fx-border-width: 0px 0px 3px 2px;" text="الموظفين">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnDepartment" alignment="BOTTOM_CENTER" contentDisplay="TOP" layoutX="10.0" layoutY="91.0" onAction="#showDepartmentView" prefHeight="65.0" prefWidth="164.0" style="-fx-background-color: #e0e0e0; -fx-border-color: #607d8b; -fx-border-width: 0px 0px 3px 2px;" text="الاقسام">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnAccounting" alignment="BOTTOM_CENTER" contentDisplay="TOP" layoutX="10.0" layoutY="172.0" onAction="#showAccountingView" prefHeight="65.0" prefWidth="164.0" style="-fx-background-color: #e0e0e0; -fx-border-color: #607d8b; -fx-border-width: 0px 0px 3px 2px;" text="الحسابات">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnBonus" alignment="BOTTOM_CENTER" contentDisplay="TOP" layoutX="10.0" layoutY="253.0" onAction="#showBonusAndDiscountView" prefHeight="65.0" prefWidth="164.0" style="-fx-background-color: #e0e0e0; -fx-border-color: #607d8b; -fx-border-width: 0px 0px 3px 2px;" text="المكافئات/الخصومات">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnBorrow" alignment="BOTTOM_CENTER" contentDisplay="TOP" layoutX="10.0" layoutY="334.0" onAction="#showLoanView" prefHeight="65.0" prefWidth="164.0" style="-fx-background-color: #e0e0e0; -fx-border-color: #607d8b; -fx-border-width: 0px 0px 3px 2px;" text="السلف">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnReport" alignment="BOTTOM_CENTER" contentDisplay="TOP" layoutX="10.0" layoutY="415.0" onAction="#showReports" prefHeight="65.0" prefWidth="164.0" style="-fx-background-color: #e0e0e0; -fx-border-color: #607d8b; -fx-border-width: 0px 0px 3px 2px;" text="التقارير">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Button>
+               </children>
+            </VBox>
+         </right>
+         <center>
+            <AnchorPane fx:id="ap" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+         </center>
+      </BorderPane>
+   </children>
+</StackPane>

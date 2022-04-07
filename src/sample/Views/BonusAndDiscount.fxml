@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.Button?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="284.0" prefWidth="405.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controllers.BonusAndDiscountController">
+   <children>
+      <VBox prefHeight="248.0" prefWidth="285.0" spacing="20.0" AnchorPane.bottomAnchor="36.0" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="90.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <HBox prefHeight="25.0" prefWidth="200.0" spacing="10.0">
+               <VBox.margin>
+                  <Insets top="20.0" />
+               </VBox.margin>
+               <children>
+                  <Button fx:id="btnSearch" onAction="#search" prefHeight="17.0" prefWidth="54.0" style="-fx-border-color: #607d8b; -fx-border-width: 0px 0px 3px 2px; -fx-background-color: #e0e0e0;" text="بحث">
+                     <font>
+                        <Font name="System Bold Italic" size="14.0" />
+                     </font>
+                  </Button>
+                  <TextField fx:id="txtSearch" alignment="CENTER" prefHeight="34.0" prefWidth="207.0" promptText="كود الموظف" />
+               </children>
+            </HBox>
+            <TextField fx:id="txtNumberHours" alignment="CENTER" prefHeight="25.0" prefWidth="259.0" promptText="عدد الساعات" />
+            <JFXComboBox fx:id="cmbBonusOrDiscount" onAction="#selectedBonusOrDiscount" prefHeight="25.0" prefWidth="417.0" promptText="خصم/مكافئه">
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </JFXComboBox>
+         </children>
+      </VBox>
+      <HBox layoutY="248.0" prefHeight="36.0" prefWidth="405.0" spacing="3.0">
+         <children>
+            <Button fx:id="btnCancel" onAction="#cancel" prefHeight="54.0" prefWidth="202.0" style="-fx-background-color: #e0e0e0; -fx-border-color: #607d8b; -fx-border-width: 0px 0px 3px 2px;" text="الغاء">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnSave" layoutX="10.0" layoutY="10.0" onAction="#save" prefHeight="41.0" prefWidth="202.0" style="-fx-background-color: #e0e0e0; -fx-border-color: #607d8b; -fx-border-width: 0px 0px 3px 2px;" text="حفظ">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Button>
+         </children>
+      </HBox>
+      <VBox alignment="TOP_CENTER" prefHeight="248.0" prefWidth="75.0" spacing="29.0" AnchorPane.bottomAnchor="36.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="الكود" textAlignment="RIGHT" wrappingWidth="54.212890625">
+               <VBox.margin>
+                  <Insets top="30.0" />
+               </VBox.margin>
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Text>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="عدد الساعات" textAlignment="RIGHT">
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Text>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="الحاله" textAlignment="RIGHT">
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Text>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

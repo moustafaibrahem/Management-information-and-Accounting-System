@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<?import javafx.scene.control.Button?>
+<AnchorPane prefHeight="832.0" prefWidth="1020.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controllers.BorrowController">
+   <children>
+      <TabPane layoutX="72.0" layoutY="32.0" prefHeight="507.0" prefWidth="741.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <tabs>
+          <Tab text="السلف">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <BorderPane prefHeight="478.0" prefWidth="741.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <center>
+                              <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="339.0" prefWidth="519.0" BorderPane.alignment="CENTER">
+                                 <children>
+                                    <VBox prefHeight="183.0" prefWidth="399.0" spacing="20.0" AnchorPane.bottomAnchor="156.0" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="90.0" AnchorPane.topAnchor="0.0">
+                                       <children>
+                                          <HBox alignment="CENTER_RIGHT" prefHeight="33.0" prefWidth="315.0" spacing="10.0">
+                                             <VBox.margin>
+                                                <Insets top="50.0" />
+                                             </VBox.margin>
+                                             <children>
+                                                <Button onAction="#searchForSetLoan" prefHeight="9.0" prefWidth="85.0" style="-fx-border-color: #607d8b; -fx-border-width: 0px 0px 3px 2px; -fx-background-color: #e0e0e0;" text="بحث">
+                                                   <font>
+                                                      <Font name="System Bold Italic" size="14.0" />
+                                                   </font>
+                                                   <HBox.margin>
+                                                      <Insets top="5.0" />
+                                                   </HBox.margin>
+                                                </Button>
+                                                <TextField fx:id="txtSearchForSetLoan" alignment="CENTER" prefHeight="22.0" prefWidth="292.0" promptText="كود الموظف">
+                                                   <HBox.margin>
+                                                      <Insets top="5.0" />
+                                                   </HBox.margin></TextField>
+                                             </children>
+                                          </HBox>
+                                          <TextField fx:id="txtBorrowMoney" alignment="CENTER" prefHeight="25.0" prefWidth="271.0" promptText="مبلغ السلفة">
+                                             <VBox.margin>
+                                                <Insets left="45.0" />
+                                             </VBox.margin>
+                                          </TextField>
+                                       </children>
+                                    </VBox>
+                                    <HBox alignment="CENTER_RIGHT" layoutX="30.0" layoutY="223.0" prefHeight="36.0" prefWidth="426.0" spacing="3.0">
+                                       <children>
+                                          <Button fx:id="btnCancel" onAction="#cancel" prefHeight="36.0" prefWidth="192.0" style="-fx-background-color: #e0e0e0; -fx-border-color: #607d8b; -fx-border-width: 0px 0px 3px 2px;" text="الغاء">
+                                             <font>
+                                                <Font name="System Bold" size="14.0" />
+                                             </font>
+                                          </Button>
+                                          <Button fx:id="btnSave" layoutX="10.0" layoutY="10.0" onAction="#setLoan" prefHeight="36.0" prefWidth="202.0" style="-fx-background-color: #e0e0e0; -fx-border-color: #607d8b; -fx-border-width: 0px 0px 3px 2px;" text="حفظ">
+                                             <font>
+                                                <Font name="System Bold" size="14.0" />
+                                             </font>
+                                          </Button>
+                                       </children>
+                                    </HBox>
+                                    <VBox alignment="TOP_CENTER" prefHeight="248.0" prefWidth="75.0" spacing="29.0" AnchorPane.bottomAnchor="36.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="الكود" textAlignment="RIGHT" wrappingWidth="33.212890625">
+                                             <VBox.margin>
+                                                <Insets top="60.0" />
+                                             </VBox.margin>
+                                             <font>
+                                                <Font name="System Bold" size="14.0" />
+                                             </font>
+                                          </Text>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="السلفة" textAlignment="RIGHT">
+                                             <VBox.margin>
+                                                <Insets />
+                                             </VBox.margin>
+                                             <font>
+                                                <Font name="System Bold" size="14.0" />
+                                             </font>
+                                          </Text>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </AnchorPane>
+                           </center>
+                        </BorderPane>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="تسديد السلف">
+               <content>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <VBox prefHeight="478.0" prefWidth="741.0" spacing="10.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <HBox alignment="CENTER_RIGHT" prefHeight="65.0" prefWidth="600.0" spacing="10.0">
+                                 <children>
+                                    <Button onAction="#searchForEmployeeLoan" prefHeight="25.0" prefWidth="61.0" style="-fx-border-color: #607d8b; -fx-border-width: 0px 0px 3px 2px; -fx-background-color: #e0e0e0;" text="بحث">
+                                       <font>
+                                          <Font name="System Bold Italic" size="14.0" />
+                                       </font>
+                                    </Button>
+                                    <TextField fx:id="txtSearchForRepayment" alignment="CENTER_RIGHT" promptText="كود الموظف">
+                                       <HBox.margin>
+                                          <Insets right="20.0" />
+                                       </HBox.margin>
+                                    </TextField>
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER" prefHeight="65.0" prefWidth="600.0" spacing="5.0">
+                                 <children>
+                                    <Button onAction="#setLoanRepayment" prefHeight="38.0" prefWidth="99.0" style="-fx-border-color: #607d8b; -fx-border-width: 0px 0px 3px 2px; -fx-background-color: #e0e0e0;" text="تأكيد">
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </Button>
+                                    <TextField fx:id="txtRepaymentMoney" prefHeight="24.0" prefWidth="90.0" />
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="المبلغ" textAlignment="RIGHT">
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets right="10.0" />
+                                       </HBox.margin>
+                                    </Text>
+                                    <TextField fx:id="txtDateForRepayment" disable="true" prefHeight="26.0" prefWidth="90.0" />
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="التاريخ" textAlignment="RIGHT">
+                                       <HBox.margin>
+                                          <Insets right="10.0" />
+                                       </HBox.margin>
+                                       <font>
+                                          <Font name="System Bold Italic" size="14.0" />
+                                       </font>
+                                    </Text>
+                                    <TextField fx:id="txtNameForRepayment" disable="true" />
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="الاسم" textAlignment="RIGHT" wrappingWidth="35.13671875">
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets right="10.0" />
+                                       </HBox.margin>
+                                    </Text>
+                                 </children>
+                              </HBox>
+                              <TableView fx:id="tvBorrow" onMouseClicked="#getSelectedRow" prefHeight="419.0" prefWidth="709.0">
+                                 <columns>
+                                    <TableColumn fx:id="colBorrowMoney" prefWidth="300.0" text="مبلغ السلفة" />
+                                    <TableColumn fx:id="colBorrowPaid" prefWidth="300.0" text="ماتم تسديده من السلفة" />
+                                    <TableColumn fx:id="colMonth" prefWidth="300.0" text="الشهر" />
+                                    <TableColumn fx:id="colID" prefWidth="52.0" text="ID" />
+                                 </columns>
+                                 <columnResizePolicy>
+                                    <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                 </columnResizePolicy>
+                                 <cursor>
+                                    <Cursor fx:constant="DEFAULT" />
+                                 </cursor>
+                              </TableView>
+                           </children>
+                        </VBox>
+                     </children>
+                  </AnchorPane>
+               </content>
+          </Tab>
+            <Tab text="تفاصيل سداد السلف">
+               <content>
+                  <BorderPane prefHeight="200.0" prefWidth="200.0">
+                     <center>
+                        <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="728.0" prefWidth="1017.0" BorderPane.alignment="CENTER">
+                           <children>
+                              <HBox alignment="CENTER_RIGHT" layoutY="-1.0" prefHeight="50.0" prefWidth="1020.0" spacing="5.0">
+                                 <children>
+                                    <Button fx:id="btnSearchForDetailsRepayment" onAction="#searchForDetailsRepayment" prefHeight="33.0" prefWidth="85.0" style="-fx-border-color: #607d8b; -fx-border-width: 0px 0px 3px 2px; -fx-background-color: #e0e0e0;" text="بحث">
+                                       <font>
+                                          <Font name="System Bold Italic" size="14.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets right="300.0" />
+                                       </HBox.margin>
+                                    </Button>
+                                    <DatePicker fx:id="dpDate" onAction="#getDP" prefHeight="25.0" prefWidth="246.0">
+                                       <HBox.margin>
+                                          <Insets left="10.0" right="10.0" />
+                                       </HBox.margin>
+                                       <opaqueInsets>
+                                          <Insets />
+                                       </opaqueInsets>
+                                    </DatePicker>
+                                    <TextField fx:id="txtNameLoansRepayment" alignment="CENTER_RIGHT" disable="true" editable="false" prefHeight="25.0" prefWidth="215.0" promptText="اسم الموظف">
+                                       <HBox.margin>
+                                          <Insets right="10.0" />
+                                       </HBox.margin>
+                                    </TextField>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="اسم الموظف" textAlignment="RIGHT" wrappingWidth="88.212890625">
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets right="10.0" />
+                                       </HBox.margin>
+                                    </Text>
+                                 </children>
+                              </HBox>
+                              <VBox alignment="CENTER" prefHeight="630.0" prefWidth="700.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="50.0">
+                                 <children>
+                                    <HBox alignment="TOP_RIGHT" prefHeight="50.0" prefWidth="541.0">
+                                       <children>
+                                          <Label fx:id="lblBorrow" prefHeight="42.0" prefWidth="157.0">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <Label prefHeight="42.0" prefWidth="450.0" text="السلف">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="السلفه" textAlignment="RIGHT" wrappingWidth="59.5966796875">
+                                             <HBox.margin>
+                                                <Insets right="13.0" top="10.0" />
+                                             </HBox.margin>
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                          </Text>
+                                       </children>
+                                    </HBox>
+                                    <TableView fx:id="tvBorrowForMonth" prefHeight="214.0" prefWidth="795.0">
+                                       <columns>
+                                          <TableColumn fx:id="colBorrowDate" prefWidth="235.0" text="التاريخ" />
+                                          <TableColumn fx:id="colBorrow" prefWidth="235.0" text="السلفه" />
+                                          <TableColumn fx:id="colMonthBorrow" prefWidth="235.0" text="الشهر" />
+                                       </columns>
+                                       <columnResizePolicy>
+                                          <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                       </columnResizePolicy>
+                                    </TableView>
+                                    <HBox alignment="CENTER_RIGHT" prefHeight="50.0" prefWidth="549.0">
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="تفاصيل السداد" textAlignment="RIGHT" wrappingWidth="167.13671875">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                             <HBox.margin>
+                                                <Insets right="13.0" />
+                                             </HBox.margin>
+                                          </Text>
+                                       </children>
+                                    </HBox>
+                                    <TableView fx:id="tvLoanRepayment" prefHeight="378.0" prefWidth="1017.0">
+                                       <columns>
+                                          <TableColumn fx:id="colRemainingAmount" prefWidth="175.0" text="مبلغ السلفه المتبقي" />
+                                          <TableColumn fx:id="colDateOfRepayment" prefWidth="175.0" text="التاريخ" />
+                                          <TableColumn fx:id="colRepaymentMoney" prefWidth="175.0" text="المبلغ المسدد" />
+                                          <TableColumn fx:id="colMonthRepayment" prefWidth="175.0" text="الشهر" />
+                                       </columns>
+                                       <columnResizePolicy>
+                                          <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                       </columnResizePolicy>
+                                    </TableView>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </AnchorPane>
+                     </center>
+                  </BorderPane>
+               </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>

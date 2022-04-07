@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+
+<AnchorPane prefHeight="730.0" prefWidth="1090.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controllers.ReportController">
+   <children>
+      <BorderPane prefHeight="675.0" prefWidth="967.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <center>
+            <TableView fx:id="tvMonthlyReport" prefHeight="563.0" prefWidth="927.0" BorderPane.alignment="CENTER">
+              <columns>
+                <TableColumn fx:id="colLoan" prefWidth="100.0" text="السلفه" />
+                <TableColumn fx:id="colMonthlySalary" prefWidth="100.0" text="الراتب المستحق" />
+                  <TableColumn fx:id="colDiscount" prefWidth="100.0" text="الخصومات" />
+                  <TableColumn fx:id="colBonus" prefWidth="100.0" text="المكافئات" />
+                  <TableColumn fx:id="colBasicSalary" prefWidth="100.0" text="الراتب الدوري" />
+                  <TableColumn fx:id="colHiringDate" prefWidth="100.0" text="تاريخ التعيين" />
+                  <TableColumn fx:id="colDeptName" prefWidth="100.0" text="القسم" />
+                  <TableColumn fx:id="colName" prefWidth="100.0" resizable="false" text="الاسم" />
+                  <TableColumn fx:id="colID" prefWidth="111.0" text="الكود" />
+              </columns>
+               <BorderPane.margin>
+                  <Insets left="10.0" right="10.0" top="15.0" />
+               </BorderPane.margin>
+               <columnResizePolicy>
+                  <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+               </columnResizePolicy>
+            </TableView>
+         </center>
+         <top>
+            <DatePicker fx:id="dpDate" onAction="#getDP" prefHeight="25.0" prefWidth="196.0" BorderPane.alignment="CENTER">
+               <BorderPane.margin>
+                  <Insets bottom="10.0" top="5.0" />
+               </BorderPane.margin>
+            </DatePicker>
+         </top>
+         <bottom>
+             <Button fx:id="btnExcel" mnemonicParsing="false" onAction="#exportExcel" prefHeight="42.0" prefWidth="145.0" text="استخراج ملف اكسيل" BorderPane.alignment="CENTER_RIGHT">
+               <BorderPane.margin>
+                  <Insets top="15.0" />
+               </BorderPane.margin>
+            </Button>
+         </bottom>
+      </BorderPane>
+   </children>
+</AnchorPane>
